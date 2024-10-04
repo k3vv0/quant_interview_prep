@@ -1,65 +1,30 @@
-# quant_interview_prep
-Popular quant interview questions in probability, statistics, and data science.
+# Quant Interview Prep
+Welcome to quant_interview_prep, a collection of resources and problem solutions aimed at preparing for quantitative finance (quant) interviews. This repository is organized into four key areas: Combinatorics, Probability, Statistics, and Trading. Each section covers important concepts and problem-solving techniques, including detailed explanations and coding solutions (whenever applicable) using Python.
 
-## Formulas
-### Combinatorics
-- **Factorial**: $$n! = n * (n-1) * (n-2) * ... * 1$$
-- **Permutations**: $$P(n, k) = \frac{n!}{(n-k)!}$$
-- **Combinations**: $$C(n, k) = \frac{n!}{k! * (n-k)!}$$
-- **Binomial Coefficient**: $$C(n, k) = \frac{n!}{k! * (n-k)!}$$
-- **Binomial Theorem**: $$(x + y)^n = \sum_{k=0}^{n} C(n, k) * x^{n-k} * y^k$$
-- **Multinomial Coefficient**: $$C(n, k_1, k_2, ..., k_m) = \frac{n!}{k_1! * k_2! * ... * k_m!}$$
-- **Multinomial Theorem**: $$(x_1 + x_2 + ... + x_m)^n = \sum_{k_1 + k_2 + ... + k_m = n} C(n, k_1, k_2, ..., k_m) * x_1^{k_1} * x_2^{k_2} * ... * x_m^{k_m}$$
-- **Stars and Bars with Indestinguishable Objects**: $$C(n+k-1, k-1)$$
-- **Stars and Bars with Distinct Objects**: $$C(n-1, k-1)$$
+Whether you're preparing for your own quant interviews or just looking to strengthen your knowledge in these areas, you'll find a wealth of useful material. Feel free to explore, learn, and contribute!
 
-### Probability
-- **Bayes' Theorem**: $$P(A|B) = \frac{P(B|A) * P(A)}{P(B)}$$
-- **Conditional Probability**: $$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
-- **Total Probability**: $$P(A) = P(A|B_1) * P(B_1) + P(A|B_2) * P(B_2) + ... + P(A|B_n) * P(B_n)$$
-- **Law of Total Expectation**: $$E(X) = E(E(X|Y))$$
-- **Law of Total Variance**: $$Var(X) = E(Var(X|Y)) + Var(E(X|Y))$$
-- **Law of Total Covariance**: $$Cov(X, Y) = E(Cov(X, Y|Z)) + Cov(E(X|Z), E(Y|Z))$$
-- **Law of Total Correlation**: $$Corr(X, Y) = E(Corr(X, Y|Z)) + Corr(E(X|Z), E(Y|Z))$$
-- **Law of Total Conditional Expectation**: $$E(X|Y) = E(E(X|Y, Z))$$
-- **Law of Total Conditional Variance**: $$Var(X|Y) = E(Var(X|Y, Z)) + Var(E(X|Y, Z))$$
-- **Law of Total Conditional Covariance**: $$Cov(X, Y|Z) = E(Cov(X, Y|Y, Z)) + Cov(E(X|Y, Z), E(Y|Y, Z))$$
-- **Law of Total Conditional Correlation**: $$Corr(X, Y|Z) = E(Corr(X, Y|Y, Z)) + Corr(E(X|Y, Z), E(Y|Y, Z))$$
-### Statistics
-- **Mean**: $$\mu = \frac{\sum_{i=1}^{n} x_i}{n}$$
-- **Variance**: $$\sigma^2 = \frac{\sum_{i=1}^{n} (x_i - \mu)^2}{n}$$
-- **Standard Deviation**: $$\sigma = \sqrt{\sigma^2}$$
-- **Covariance**: $$Cov(X, Y) = \frac{\sum_{i=1}^{n} (x_i - \mu_x) * (y_i - \mu_y)}{n}$$
-- **Correlation**: $$Corr(X, Y) = \frac{Cov(X, Y)}{\sigma_x * \sigma_y}$$
-- **Least Squares Regression Line**: $$y = mx + b$$
-- **Least Squares Regression Slope**: $$m = \frac{\sum_{i=1}^{n} (x_i - \mu_x) * (y_i - \mu_y)}{\sum_{i=1}^{n} (x_i - \mu_x)^2}$$
-- **Least Squares Regression Intercept**: $$b = \mu_y - m * \mu_x$$
-- **Least Squares Regression Line Prediction**: $$\hat{y} = m * x + b$$
-- **Least Squares Regression Line Residual**: $$e = y - \hat{y}$$
-- **Least Squares Regression Line Residual Sum of Squares**: $$RSS = \sum_{i=1}^{n} e_i^2$$
-- **Least Squares Regression Line Total Sum of Squares**: $$TSS = \sum_{i=1}^{n} (y_i - \mu_y)^2$$
-- **Least Squares Regression Line Explained Sum of Squares**: $$ESS = \sum_{i=1}^{n} (\hat{y_i} - \mu_y)^2$$
-- **Least Squares Regression Line R-Squared**: $$R^2 = \frac{ESS}{TSS} = 1 - \frac{RSS}{TSS}$$
-- **Least Squares Regression Line Standard Error**: $$SE = \sqrt{\frac{RSS}{n-2}}$$
-- **Least Squares Regression Line Confidence Interval**: $$CI = m \pm t_{\alpha/2} * SE$$
-- **Least Squares Regression Line Prediction Interval**: $$PI = \hat{y} \pm t_{\alpha/2} * SE$$
-- **Least Squares Regression Line Hypothesis Test**: $$t = \frac{m - 0}{SE}$$
-- **Least Squares Regression Line Hypothesis Test P-Value**: $$P = 2 * (1 - t_{n-2})$$
-- **Least Squares Regression Line Hypothesis Test Confidence Interval**: $$CI = m \pm t_{n-2} * SE$$
-- **Least Squares Regression Line Hypothesis Test Prediction Interval**: $$PI = \hat{y} \pm t_{n-2} * SE$$
-- **Least Squares Regression Line Hypothesis Test F-Statistic**: $$F = \frac{ESS/k}{RSS/(n-k-1)}$$
-- **Least Squares Regression Line Hypothesis Test F-Statistic P-Value**: $$P = 1 - F_{n-k-1, k}$$
-- **Least Squares Regression Line Hypothesis Test F-Statistic Confidence Interval**: $$CI = \frac{1}{F_{k, n-k-1}}$$
-- **Least Squares Regression Line Hypothesis Test F-Statistic Prediction Interval**: $$PI = \frac{1}{F_{k, n-k-1}}$$
-- **Least Squares Regression Line Hypothesis Test Chi-Squared Statistic**: $$\chi^2 = \frac{n * R^2}{1 - R^2}$$
-- **Least Squares Regression Line Hypothesis Test Chi-Squared Statistic P-Value**: $$P = 1 - \chi^2_{1, n-2}$$
-- **Least Squares Regression Line Hypothesis Test Chi-Squared Statistic Confidence Interval**: $$CI = \frac{1}{\chi^2_{n-2, 1}}$$
-- **Least Squares Regression Line Hypothesis Test Chi-Squared Statistic Prediction Interval**: $$PI = \frac{1}{\chi^2_{n-2, 1}}$$
-- **Least Squares Regression Line Hypothesis Test Z-Statistic**: $$Z = \frac{m - 0}{SE}$$
-- **Least Squares Regression Line Hypothesis Test Z-Statistic P-Value**: $$P = 2 * (1 - Z)$$
-- **Least Squares Regression Line Hypothesis Test Z-Statistic Confidence Interval**: $$CI = m \pm Z$$
-- **Least Squares Regression Line Hypothesis Test Z-Statistic Prediction Interval**: $$PI = \hat{y} \pm Z$$
-- **Least Squares Regression Line Hypothesis Test T-Statistic**: $$T = \frac{m - 0}{SE}$$
-- **Least Squares Regression Line Hypothesis Test T-Statistic P-Value**: $$P = 2 * (1 - T_{n-2})$$
-- **Least Squares Regression Line Hypothesis Test T-Statistic Confidence Interval**: $$CI = m \pm T_{n-2} * SE$$
-- **Least Squares Regression Line Hypothesis Test T-Statistic Prediction Interval**: $$PI = \hat{y} \pm T_{n-2} * SE$$
+## Directory Structure
+- [Combinatorics](Combinatorics/README.md)
+    - This section covers key combinatorics concepts, such as permutations, combinations, and advanced counting techniques that often appear in quant interviews.
+    - Each problem comes with a markdown explanation and Python code to demonstrate the solution.
+    - Key concepts and formulas are documented in the README.md file located within this directory.
+- [Probability](Probability/README.md)
+    - The Probability directory includes problems on probability theory, conditional probability, Bayes' theorem, and probability distributions.
+    - Each problem is explained step-by-step in the .ipynb files, with supporting code snippets.
+    - The directory's README.md file outlines essential probability concepts and theorems relevant to quant interviews.
+- [Statistics](Statistics/README.ipynb)
+    - This directory focuses on statistical concepts, including hypothesis testing, regression, and statistical distributions commonly used in quantitative finance.
+    - Rather than a traditional README.md file, this directory contains a README.ipynb where key statistical tests and concepts are implemented directly in code. It includes detailed markdown explanations of various statistical methods used in quant interviews.
+- [Trading](Trading/README.md)
+    - The Trading directory addresses concepts related to algorithmic trading, market dynamics, and financial models.
+    - Problems in this section range from simple models to more complex trading strategies, complete with explanations and code.
+    - The README.md file contains summaries of core trading concepts, including key formulas and ideas around financial markets.
+
+
+## Who is This For?
+This repository was initially created for my own preparation as I embark on the quant recruiting process, but it contains valuable materials that anyone preparing for quant interviews—or simply looking to reinforce their understanding of these topics—can benefit from. Whether you're a student, job applicant, or a professional, feel free to use these resources as part of your study routine.
+
+## Future Plans
+- Add more problems in each section.
+- Expand the Trading section with real-world algorithmic trading challenges.
+- Explore stochastic processes and machine learning applications for quant interviews.

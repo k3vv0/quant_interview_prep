@@ -1,0 +1,12 @@
+# Formulas
+- **Bayes' Theorem**: $$P(A|B) = \frac{P(B|A) * P(A)}{P(B)}$$
+- **Conditional Probability**: $$P(A|B) = \frac{P(A \cap B)}{P(B)}$$
+- **Total Probability**: $$P(A) = P(A|B_1) * P(B_1) + P(A|B_2) * P(B_2) + ... + P(A|B_n) * P(B_n)$$
+- **Law of Total Expectation**: $$E(X) = E(E(X|Y))$$
+- **Law of Total Variance**: $$Var(X) = E(Var(X|Y)) + Var(E(X|Y))$$
+- **Law of Total Covariance**: $$Cov(X, Y) = E(Cov(X, Y|Z)) + Cov(E(X|Z), E(Y|Z))$$
+- **Law of Total Correlation**: $$Corr(X, Y) = E(Corr(X, Y|Z)) + Corr(E(X|Z), E(Y|Z))$$
+- **Law of Total Conditional Expectation**: $$E(X|Y) = E(E(X|Y, Z))$$
+- **Law of Total Conditional Variance**: $$Var(X|Y) = E(Var(X|Y, Z)) + Var(E(X|Y, Z))$$
+- **Law of Total Conditional Covariance**: $$Cov(X, Y|Z) = E(Cov(X, Y|Y, Z)) + Cov(E(X|Y, Z), E(Y|Y, Z))$$
+- **Law of Total Conditional Correlation**: $$Corr(X, Y|Z) = E(Corr(X, Y|Y, Z)) + Corr(E(X|Y, Z), E(Y|Y, Z))$$
